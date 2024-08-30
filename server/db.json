@@ -7,5 +7,14 @@
       "password": "fabiomkvf"
     }
   ],
-  "consultas": []
+  "consultas": [
+    {
+      "id": "dc92",
+      "name": "Adrian",
+      "Consultas": "fabio hp perra",
+      "detalleCon": "aefñlivewuñ",
+      "select": "tipo ayuda",
+      "date": "2024-08-30"
+    }
+  ]
 }
