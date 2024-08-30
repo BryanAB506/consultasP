@@ -17,15 +17,13 @@
       "name": "fabio",
       "email": "jherrera@fwdcostarica.com",
       "password": "fabiomkvf"
+    },
+    {
+      "id": "a39f",
+      "name": "fabio",
+      "email": "fabio@gmail.com",
+      "password": "fabiomkvf"
     }
   ],
-  "consultas": [
-    {
-      "id": "ef13",
-      "Consultas": "pene",
-      "detalleCon": "pene",
-      "select": "tipo ayuda",
-      "date": "2024-08-30"
-    }
-  ]
+  "consultas": []
 }
