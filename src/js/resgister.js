@@ -1,31 +1,36 @@
 import { postRegister } from "../../services/postRegister.js";
 import { getRegister } from "../../services/getRegister.js";
 
+// Espera a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.getElementById('loginForm');
-    const registerForm = document.getElementById('registerForm');
+    // Seleccionar elementos del DOM
+    const btn = document.querySelector('.flip-card__back .flip-card__btn');
     const errorModal = document.getElementById('errorModal');
     const errorMessage = document.getElementById('errorMessage');
     const spanClose = document.querySelector('#errorModal .close');
 
+    // Función para mostrar el moda de error
     const showError = (message) => {
         console.log('Mostrando error:', message); 
         errorMessage.textContent = message;
         errorModal.style.display = 'block';
     };
 
+    // Función para ocultar el modal de error
     const hideError = () => {
         console.log('Ocultando modal de error'); 
         errorModal.style.display = 'none';
     };
 
+    // Función para mostrar mensaje de éxito
     const showSuccess = (message) => {
         alert(message);
         setTimeout(() => {
-            window.location.href = 'consultasP\src\html\consultas.html'; 
+            window.location.href = 'javascrip-proyecto3/index.html'; 
         }, 1000); 
     };
 
+    // Función para verificar si el ID o email ya existen
     const checkIfExists = async (email) => {
         try {
             const response = await getRegister();
@@ -41,10 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const validateRegisterForm = async () => {
-        const name = document.querySelector('#registerForm [name="name"]').value.trim();
-        const email = document.querySelector('#registerForm [name="email"]').value.trim();
-        const password = document.querySelector('#registerForm [name="password"]').value.trim();
+    // Función para validar el formulario
+    const validateForm = async () => {
+        const name = document.querySelector('.flip-card__back [placeholder="Name"]').value.trim();
+        const email = document.querySelector('.flip-card__back [placeholder="Email"]').value.trim();
+        const password = document.querySelector('.flip-card__back [placeholder="Password"]').value.trim();
 
         let isValid = true;
 
@@ -75,78 +81,32 @@ document.addEventListener('DOMContentLoaded', () => {
         return isValid;
     };
 
-    const validateLoginForm = async () => {
-        const email = document.querySelector('#loginForm [name="email"]').value.trim();
-        const password = document.querySelector('#loginForm [name="password"]').value.trim();
-
-        let isValid = true;
-
-        if (email === '') {
-            showError('Email sin llenar');
-            isValid = false;
-        } else if (!/\S+@\S+\.\S+/.test(email)) {
-            showError('Email no válido');
-            isValid = false;
-        }
-
-        if (password === '') {
-            showError('Contraseña sin llenar');
-            isValid = false;
-        }
-
-        return isValid;
-    };
-
-    const handleRegister = async (event) => {
+    // Manejo del clic en el botón de confirmación del registro
+    btn.addEventListener('click', async (event) => {
         event.preventDefault();
 
-        if (await validateRegisterForm()) {
-            const name = document.querySelector('#registerForm [name="name"]').value.trim();
-            const email = document.querySelector('#registerForm [name="email"]').value.trim();
-            const password = document.querySelector('#registerForm [name="password"]').value.trim();
+        if (await validateForm()) {
+            const name = document.querySelector('.flip-card__back [placeholder="Name"]').value.trim();
+            const email = document.querySelector('.flip-card__back [placeholder="Email"]').value.trim();
+            const password = document.querySelector('.flip-card__back [placeholder="Password"]').value.trim();
 
             try {
                 await postRegister(name, email, password);
                 showSuccess('Registro exitoso');
-                registerForm.reset(); 
+                document.querySelector('.flip-card__back form').reset(); 
             } catch (error) {
                 showError('Error al registrar usuario');
             }
         }
-    };
+    });
 
-    const handleLogin = async (event) => {
-        event.preventDefault();
-
-        if (await validateLoginForm()) {
-            const email = document.querySelector('#loginForm [name="email"]').value.trim();
-            const password = document.querySelector('#loginForm [name="password"]').value.trim();
-
-            try {
-                const users = await getRegister();
-                const user = users.find(u => u.email === email && u.password === password);
-
-                if (user) {
-                    showSuccess('Inicio de sesión exitoso');
-                    loginForm.reset();
-                } else {
-                    showError('Credenciales incorrectas');
-                }
-            } catch (error) {
-                showError('Error al iniciar sesión');
-            }
-        }
-    };
-
-    loginForm.addEventListener('submit', handleLogin);
-    registerForm.addEventListener('submit', handleRegister);
-
+    // Manejo del clic en el botón de cerrar del modal
     spanClose.addEventListener('click', hideError);
 
+    // Manejo del clic fuera del modal para cerrarlo
     window.addEventListener('click', (event) => {
         if (event.target === errorModal) {
             hideError();
         }
     });
 });
-
