@@ -1,36 +1,14 @@
-async function postRegister(name,lastName,id,email,password) {
+export const postRegister = async (name, email, password) => {
     try {
-     
-        const userData = { 
-            name,
-            lastName,
-            id,
-            email,
-            password
-
-        
-        };
-
-        const response = await fetch("http://localhost:3001/users", {
+        const response = await fetch('http://localhost:3001/user', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(userData)
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, password })
         });
-
-     
-        const dato = await response.json();
-        console.log("datos almacenados");
-        return dato;
-
-        
+        if (!response.ok) throw new Error('Error en el registro');
     } catch (error) {
-        console.error('Error posting user:', error);
+        console.error('Error en postRegister:', error);
         throw error;
     }
 }
-
-export{postRegister}
-
   

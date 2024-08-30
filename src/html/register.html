@@ -22,50 +22,41 @@
         </div>
     </div>
 
-<h1>hola</h1>
 
-    <div class="moverLogin">
-        <div class="brutalist-card">
-            <div class="brutalist-card__header">
-                <div class="brutalist-card__icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
-                        </path>
-                    </svg>
-                </div>
-                <div class="brutalist-card__alert">Register</div>
-            </div>
-            <form id="formulario">
-                <div class="brutalist-card__message">
-                    <div class="">
-                        <label for="id">Cedula</label>
-                        <input class="controls" type="text" id="id" name="cedula" required>
+    <div class="moverL">
+        
+        <div class="wrapper">
+            <div class="card-switch">
+                <label class="switch">
+                    <input type="checkbox" class="toggle">
+                    <span class="slider"></span>
+                    <span class="card-side"></span>
+                    <div class="flip-card__inner">
+                        <div class="flip-card__front">
+                            <div class="title">Log in</div>
+                            <form class="flip-card__form" action="">
+                                <input class="flip-card__input" name="email" placeholder="Email" type="email">
+                                <input class="flip-card__input" name="password" placeholder="Password" type="password">
+                                <button class="flip-card__btn">Let`s go!</button>
+                            </form>
+                        </div>
+                        <div class="flip-card__back">
+                            <div class="title">Sign up</div>
+                            <form class="flip-card__form" action="">
+                                <input class="flip-card__input" placeholder="Name" type="name">
+                                <input class="flip-card__input" name="email" placeholder="Email" type="email">
+                                <input class="flip-card__input" name="password" placeholder="Password" type="password">
+                                <button class="flip-card__btn">Confirm!</button>
+                            </form>
+                        </div>
                     </div>
-                    <div class="">
-                        <label for="name">Nombre</label>
-                        <input class="controls" type="text" id="name" name="name" required>
-                    </div>
-                    <div class="">
-                        <label for="lastName">Apellido</label>
-                        <input class="controls" type="text" id="lastName" name="Apellido" required>
-                    </div>
-                    <div class="">
-                        <label for="email">Email</label>
-                        <input class="controls" type="email" id="email" name="email" required>
-                    </div>
-                    <div class="">
-                        <label for="password">Contraseña</label>
-                        <input class="controls" type="password" id="password" name="password" required>
-                    </div>
-                </div>
-            </form>
-            <div class="brutalist-card__actions">
-                <button class="brutalist-card__button brutalist-card__button--mark" id="boton" >Save</button>
-
+                </label>
             </div>
         </div>
+
     </div>
+
+
     <div id="errorModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
