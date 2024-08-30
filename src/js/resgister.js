@@ -22,7 +22,7 @@ const hideError = () => {
 const showSuccess = (message) => {
   alert(message);
   setTimeout(() => {
-    window.location.href = 'javascrip-proyecto3/index.html'; 
+    window.location.href = 'index.html'; 
   }, 1000); 
 };
 

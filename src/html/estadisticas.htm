@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/consultas.css">
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estadisticas.css">
+    <title>Document</title>
 </head>
 
-
-  <header>
+<header>
 
     <div class="input">
         <button class="value">
@@ -69,55 +68,30 @@
 </header>
 
 
-
-
-
-
 <body class="body">
+    <div id="contenedorPadre">
+        <h2 id="tituloPrins" style="text-align: center;">Tabla de Consultas</h2>
+        <div id="contenedorTablas">
+            <table class="Tabla">
+                <thead id="titulo2">
+                    <tr>
+                        <th>Funciones</th>
+                        <th>Estudiantes</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Detalle de Consultas</th>
+                    </tr>
+                </thead>
 
 
+        <tbody id="consulta-tbody">
+            <!-- Los datos se llenarán dinámicamente aquí -->
+        </tbody>
 
-  <form class="ftm" action="action_page.php">
-    <div class="container-form">
-      <div class="fnt">
-        <center>
-          <h2 id="formfont">Formulario</h2>
-        </center>
-      </div>
-      <br><br>
-      <hr>
-
-      <label id="label" for="nombre"><b>Consultas</b></label>
-      <input type="text" placeholder=" " name="Consultas" id="Consultas" required>
-
-      <label id="label" for="ced"><b>detalles de la consulta</b></label>
-      <input type="text" placeholder=" " name="psw" id="detalleCon" required>
-      <br>
-      <label id="label" for="lista"><b>Su tipo de consulta</b>
-      </label>
-      <select name="cual es su consulta" id="select">
-        <option>seleccione su consulta</option>
-        <option>tipo ayuda</option>
-        <option>solucion de problemas</option>
-        <option>aclaracion de datos</option>
-      </select>
-      <br>
-      <br>
-
-      <label id="label" for="lista2"><b>Seleccione el Dia de su Consulta</b></label>
-      <input type="date" placeholder=" " name="lista" id="date" required>
-
-      <br>
-      <br>
-      <button id="botonEnviar" class="brutalist-card_button brutalist-card_button--mark">Enviar consulta</button>
-      <button id="bontonCanselar" class="brutalist-card_button brutalist-card_button--red">Cancelar</button>
-
-    </div>
-  </form>
+    </table>
 
 
-
-  <script type="module" src="../js/consultas.js"></script>
+    <script type="module" src="/javascrip-proyecto3/js/estadisticas.js"></script>
 </body>
 
 </html>
