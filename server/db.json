@@ -20,6 +20,23 @@
       "detalleCon": "pene",
       "select": "tipo ayuda",
       "date": "2024-08-30"
+=======
+  "users": [],
+  "consultas": [
+    {
+      "id": "0319",
+      "Consultas": "mi compañero es bautista",
+      "detalleCon": "me voy a matar",
+      "select": "tipo ayuda",
+      "date": "2024-08-30"
+    },
+    {
+      "id": "a72c",
+      "Consultas": "ayuda",
+      "detalleCon": "hola",
+      "select": "solucion de problemas",
+      "date": "2024-08-30"
+
     }
   ]
 }
