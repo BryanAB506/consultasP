@@ -6,9 +6,6 @@
 
 
 
-
-
-
 formfont b{
     text-align: center;
     font-weight: lighter;
@@ -206,7 +203,7 @@ a {
     margin-top: 1rem;
 }
 
-.brutalist-card__button {
+.brutalist-card_button {
     display: block;
     width: 100%;
     padding: 0.75rem;
@@ -225,7 +222,7 @@ a {
     margin-bottom: 1rem;
 }
 
-.brutalist-card__button--read {
+.brutalist-card__button--red {
     background-color: #000;
     color: #fff;
 }
@@ -273,6 +270,74 @@ a {
     transform: translate(5px, 5px);
     box-shadow: none;
 }
+
+
+/*estoe es el navbar*/
+
+.input {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    background-color: #0d1117;
+    justify-content: center;
+    border-radius: 5px;
+    gap: 7.5px;
+    width: 100%;
+    height: 80px;
+
+}
+
+.value {
+    background-color: transparent;
+    border: none;
+    padding: 30px;
+    color: white;
+    display: flex;
+    position: relative;
+    gap: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-size: 1.2em;
+}
+
+.value:not(:active):hover,
+.value:focus {
+    background-color: #21262c;
+}
+
+.value:focus,
+.value:active {
+    background-color: #1a1f24;
+    outline: none;
+}
+
+.value::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    width: 100%;
+    height: 3px;
+    background-color: #d31d1d;
+    border-radius: 5px;
+    opacity: 0;
+}
+
+.value:focus::before,
+.value:active::before {
+    opacity: 1;
+}
+
+.value svg {
+    width: 15px;
+}
+
+/* aqui termina*/
+
+
+
+
 
 
 
