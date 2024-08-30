@@ -2,44 +2,11 @@
   "users": [],
   "consultas": [
     {
-      "id": "7a7e",
+      "id": "0319",
       "Consultas": "mi compañero es bautista",
       "detalleCon": "me voy a matar",
-      "select": "seleccione su consulta",
-      "date": "2024-08-30"
-    },
-    {
-      "id": "ca5b",
-      "Consultas": "mi compañero es bautista",
-      "detalleCon": "me voy a matar",
-<<<<<<< HEAD
-      "select": "seleccione su consulta",
-      "date": "2024-08-30"
-    },
-    {
-      "id": "0f16",
-      "Consultas": "mi compañero es bautista",
-      "detalleCon": "me voy a matar",
-      "select": "seleccione su consulta",
-      "date": "2024-08-30"
-=======
-      "select": "solucion de problemas",
-      "date": "2024-08-17"
-    },
-    {
-      "id": "4701",
-      "Consultas": "pene",
-      "detalleCon": "pene",
       "select": "tipo ayuda",
-      "date": "2024-08-25"
-    },
-    {
-      "id": "4701",
-      "Consultas": "pene",
-      "detalleCon": "pene",
-      "select": "tipo ayuda",
-      "date": "2024-08-25"
->>>>>>> 944bce71c3ae89e62c9ab654e27a0cf69181ffc1
+      "date": "2024-08-30"
     }
   ]
 }
