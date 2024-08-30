@@ -1,6 +1,6 @@
 export async function getRegister() {
     try {
-        const response = await fetch("http://localhost:3001/users");
+        const response = await fetch("http://localhost:3001/user");
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -11,4 +11,3 @@ export async function getRegister() {
         throw error;
     }
 }
-export{getRegister};
