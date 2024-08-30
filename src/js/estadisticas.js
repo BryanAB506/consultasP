@@ -1,9 +1,8 @@
 import { fetchConsultas } from "../../services/getConsultas"; 
-import { getRegister } from "../../services/getRegister"; 
 
 const tbody = document.getElementById('consulta-tbody');
 
-// Crea una fila de tabla a partir de los datos de la consulta
+// Crea una fila a la tabla
 const createTableRow = (consulta) => {
     if (!consulta) {
         console.error('Consulta es undefined');
@@ -11,10 +10,10 @@ const createTableRow = (consulta) => {
     }
 
     const tr = document.createElement('tr');
-    const horaActual = new Date().toLocaleTimeString(); // Obtiene la hora actual
+    const horaActual = new Date().toLocaleTimeString(); 2
 
     tr.innerHTML = `
-        <td>${consulta.name || 'N/A'}</td>
+        <td>${consulta.name||'N/A'}</td>
         <td>${consulta.select || 'N/A'}</td>
         <td>${consulta.Consultas || 'N/A'}</td>
         <td>${consulta.date || 'N/A'}</td>
@@ -32,12 +31,12 @@ const createTableRow = (consulta) => {
     return tr;
 };
 
-// Maneja la acción de aceptar una consulta
+//  aceptar una consulta
 const handleAceptar = (id) => {
     console.log(`Aceptar consulta con ID: ${id}`);
 };
 
-// Maneja la acción de eliminar una consulta
+// eliminar una consulta
 const handleEliminar = async (id) => {
     console.log(`Eliminar consulta con ID: ${id}`);
     try {
@@ -46,7 +45,7 @@ const handleEliminar = async (id) => {
         });
 
         if (response.ok) {
-            // Eliminar la fila de la tabla
+            // Eliminar la fila 
             const rowToDelete = document.querySelector(`button[data-id="${id}"]`).closest('tr');
             tbody.removeChild(rowToDelete);
         } else {
@@ -57,27 +56,31 @@ const handleEliminar = async (id) => {
     }
 };
 
-// Llena la tabla con las consultas obtenidas
+// Llena la tabla 
 const populateTable = async () => {
     try {
         const consultas = await fetchConsultas();
-        const usuarios = await getRegister();
 
         console.log('Consultas:', consultas);
-        console.log('Usuarios:', usuarios);
 
-        if (Array.isArray(consultas) && Array.isArray(usuarios)) {
-            tbody.innerHTML = ''; // Limpiar contenido previo
-         
+        if (Array.isArray(consultas)) {
+            tbody.innerHTML = ''; 
+
+            consultas.forEach(consulta => {
+                const row = createTableRow(consulta);
+                tbody.appendChild(row);
+            });
         } else {
-            console.error('Datos de consultas o usuarios no son arrays');
+            console.error('Datos de consultas no son arrays');
         }
     } catch (error) {
-        console.error('Error al cargar consultas o usuarios:', error);
+        console.error('Error al cargar consultas:', error);
     }
 };
 
 document.addEventListener('DOMContentLoaded', populateTable);
+
+
 
 
 

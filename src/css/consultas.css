@@ -28,6 +28,12 @@ formfont b{
     background-color: white;
 }
 
+#name{
+    width: 590px;
+    background-color: black;
+    color: white;
+    font-size: 1.1em;
+}
 
 #tituloEstadisticas{
     font-size: 1.4em;
