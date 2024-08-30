@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const showSuccess = (message) => {
         alert(message);
         setTimeout(() => {
-            window.location.href = 'javascrip-proyecto3/index.html'; 
+            window.location.href = ''; 
         }, 1000); 
     };
 
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const showSuccess = (message) => {
         alert(message);
         setTimeout(() => {
-            window.location.href = 'consultasP/src/html/consultas.html'; 
+            window.location.href = 'http://localhost:1234/consultas.html'; 
         }, 1000);
     };
 

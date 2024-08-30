@@ -25,5 +25,34 @@
       "password": "fabiomkvf"
     }
   ],
-  "consultas": []
+  "consultas": [
+    {
+      "id": "9085",
+      "Consultas": "lhSioqior",
+      "detalleCon": "pdfqpowfoqpngpq",
+      "select": "tipo ayuda",
+      "date": "2024-08-30"
+    },
+    {
+      "id": "1566",
+      "Consultas": "lhSioqior",
+      "detalleCon": "pdfqpowfoqpngpq",
+      "select": "tipo ayuda",
+      "date": "2024-08-30"
+    },
+    {
+      "id": "0ace",
+      "Consultas": "lhSioqior",
+      "detalleCon": "pdfqpowfoqpngpq",
+      "select": "tipo ayuda",
+      "date": "2024-08-30"
+    },
+    {
+      "id": "e34c",
+      "Consultas": "fabiio rico",
+      "detalleCon": "ricoooooooooooooo",
+      "select": "aclaracion de datos",
+      "date": "2024-08-30"
+    }
+  ]
 }
