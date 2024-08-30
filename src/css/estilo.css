@@ -1,0 +1,505 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: helvetica;
+}
+
+.moverCubo {
+    display: flex;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.cube-loader {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotateX(-30deg) rotateY(0);
+    }
+
+    100% {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+
+.cube-loader .cube-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.cube-loader .cube-wrapper .cube-span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(calc(90deg * var(--i))) translateZ(37.5px);
+    background: url('../img/descarga.png') no-repeat center center;
+    background-size: cover;
+}
+
+.cube-top {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: #272424;
+    transform: rotateX(90deg) translateZ(37.5px);
+    transform-style: preserve-3d;
+}
+
+.cube-top::before {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url('../img/descarga.png') no-repeat center center;
+    background-size: cover;
+    transform: translateZ(-90px);
+    filter: blur(10px);
+   
+}
+
+
+.moverLogin {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 50px;
+}
+
+.brutalist-card {
+    width: 320px;
+    border: 4px solid #000;
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 10px 10px 0 #000;
+    font-family: "Arial", sans-serif;
+}
+
+.brutalist-card__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #000;
+    padding-bottom: 1rem;
+}
+
+
+
+.brutalist-card__icon svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: #fff;
+}
+
+.brutalist-card__alert {
+    font-weight: 900;
+    color: #000;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-left: 50px;
+}
+
+.brutalist-card__message {
+    margin-top: 1rem;
+    color: #000;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    border-bottom: 2px solid #000;
+    padding-bottom: 1rem;
+    font-weight: 600;
+}
+
+.brutalist-card__actions {
+    margin-top: 1rem;
+}
+
+.brutalist-card__button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid #000;
+    background-color: #fff;
+    color: #000;
+    position: relative;
+    transition: all 0.2s ease;
+    box-shadow: 5px 5px 0 #000;
+    overflow: hidden;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.brutalist-card__button--read {
+    background-color: #000;
+    color: #fff;
+}
+
+.brutalist-card__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: all 0.6s;
+}
+
+.brutalist-card__button:hover::before {
+    left: 100%;
+}
+
+.brutalist-card__button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 #000;
+}
+
+.brutalist-card__button--mark:hover {
+    background-color: #296fbb;
+    border-color: #296fbb;
+    color: #fff;
+    box-shadow: 7px 7px 0 #004280;
+}
+
+.brutalist-card__button--read:hover {
+    background-color: #ff0000;
+    border-color: #ff0000;
+    color: #fff;
+    box-shadow: 7px 7px 0 #800000;
+}
+
+.brutalist-card__button:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+
+
+.section {
+    width: 400px;
+    height: 340px;
+    background: #000;
+    margin: auto;
+    box-shadow: 7px 13px 37px #e4dfdf;
+    padding: 20px 30px;
+    border-top: 4px solid #249749b9;
+    color: white;
+    border-radius: 15px;
+
+
+}
+
+.section h5 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    border-bottom: 1px solid;
+    font-family: helvetica;
+
+}
+
+
+.controls {
+    width: 100%;
+    border: 1px solid #d4dbd6;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #000;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    color: white;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    height: 20%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+@keyframes hero-gradient-animation {
+    0% {
+        --y-0: 16%;
+        --c-0: hsla(289, 100%, 52%, 1);
+        --s-start-0: 3%;
+        --s-end-0: 22%;
+        --x-0: 59%;
+        --s-start-1: 1%;
+        --s-end-1: 23%;
+        --x-1: 94%;
+        --y-1: 5%;
+        --c-1: hsla(236.94117647058823, 100%, 50%, 1);
+        --c-2: hsla(181.84615384615384, 97%, 61%, 1);
+        --s-start-2: 1%;
+        --s-end-2: 28%;
+        --x-2: 78%;
+        --y-2: 75%;
+        --c-3: hsla(313.4010152284264, 91%, 42%, 1);
+        --y-3: 86%;
+        --x-3: 7%;
+        --s-start-3: 3%;
+        --s-end-3: 36%;
+        --y-4: 59%;
+        --c-4: hsla(243.6144578313253, 83%, 19%, 1);
+        --s-start-4: 10%;
+        --s-end-4: 68%;
+        --x-4: 59%;
+    }
+
+    100% {
+        --y-0: 13%;
+        --c-0: hsla(287.21311475409834, 87%, 40%, 1);
+        --s-start-0: 3.315649867374005%;
+        --s-end-0: 33%;
+        --x-0: 94%;
+        --s-start-1: 3.315649867374005%;
+        --s-end-1: 33%;
+        --x-1: 65%;
+        --y-1: 8%;
+        --c-1: hsla(236.66666666666669, 96%, 40%, 1);
+        --c-2: hsla(183.50364963503654, 62%, 42%, 0.5);
+        --s-start-2: 0%;
+        --s-end-2: 7.626657824933687%;
+        --x-2: 92%;
+        --y-2: 90%;
+        --c-3: hsla(311.6666666666667, 90%, 31%, 1);
+        --y-3: 19%;
+        --x-3: 13%;
+        --s-start-3: 12.198718286003295%;
+        --s-end-3: 40%;
+        --y-4: 9%;
+        --c-4: hsla(246.82926829268294, 83%, 28%, 1);
+        --s-start-4: 13%;
+        --s-end-4: 68%;
+        --x-4: 2%;
+    }
+}
+
+@property --y-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 16%
+}
+
+@property --c-0 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(289, 100%, 52%, 1)
+}
+
+@property --s-start-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 3%
+}
+
+@property --s-end-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 22%
+}
+
+@property --x-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 59%
+}
+
+@property --s-start-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 1%
+}
+
+@property --s-end-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 23%
+}
+
+@property --x-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 94%
+}
+
+@property --y-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 5%
+}
+
+@property --c-1 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(236.94117647058823, 100%, 50%, 1)
+}
+
+@property --c-2 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(181.84615384615384, 97%, 61%, 1)
+}
+
+@property --s-start-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 1%
+}
+
+@property --s-end-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 28%
+}
+
+@property --x-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 78%
+}
+
+@property --y-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 75%
+}
+
+@property --c-3 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(313.4010152284264, 91%, 42%, 1)
+}
+
+@property --y-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 86%
+}
+
+@property --x-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 7%
+}
+
+@property --s-start-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 3%
+}
+
+@property --s-end-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 36%
+}
+
+@property --y-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 59%
+}
+
+@property --c-4 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(243.6144578313253, 83%, 19%, 1)
+}
+
+@property --s-start-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 10%
+}
+
+@property --s-end-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 68%
+}
+
+@property --x-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 59%
+}
+
+.body {
+    --y-0: 16%;
+    --c-0: hsla(289, 100%, 52%, 1);
+    --x-0: 59%;
+    --x-1: 94%;
+    --y-1: 5%;
+    --c-1: hsla(236.94117647058823, 100%, 50%, 1);
+    --c-2: hsla(181.84615384615384, 97%, 61%, 1);
+    --x-2: 78%;
+    --y-2: 75%;
+    --c-3: hsla(313.4010152284264, 91%, 42%, 1);
+    --y-3: 86%;
+    --x-3: 7%;
+    --y-4: 59%;
+    --c-4: hsla(243.6144578313253, 83%, 19%, 1);
+    --x-4: 59%;
+    ;
+    background-color: hsla(228, 71%, 4%, 1);
+    background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3)), radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4), transparent var(--s-end-4));
+    animation: hero-gradient-animation 20s linear infinite alternate;
+    background-blend-mode: normal, normal, normal, normal, normal;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+}

@@ -1,0 +1,535 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: helvetica;
+}
+
+
+
+
+
+
+formfont b{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.ftm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    margin-left: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    margin-top: 90px;
+    background-color: white;
+}
+
+
+#tituloEstadisticas{
+    font-size: 1.4em;
+    margin-left: 50px;
+}
+
+
+#tituloConsultas{
+    font-size: 1.4em;
+    margin-left: 35px;
+}
+
+#tituloFormulario{
+    font-size: 1.7em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#navbar{
+    height: 100px;
+    background-color: white;
+}
+
+.container-form{
+    padding: 16px;
+    justify-content: center;
+    display: block;
+    text-align: center;
+    color: black;
+}
+
+input[type=text],
+input[type=password]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus,
+input[type=password]:focus{
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.sendbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 15px 20px;
+    margin: 8px 0;
+    border-radius: 1px solid;
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
+    border-radius: 8px;
+}
+
+.sendbtn:hover {
+    opacity: 1;
+}
+
+a {
+    color: dodgerblue;
+}
+
+.cancelbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border-radius: 1px solid;
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
+    border-radius: 8px;
+}
+
+
+
+#label{
+    font-size: 1.3em;
+}
+
+#select{
+    font-size: 1.3em;
+    width: 580px;
+    height: 47px;
+    background-color: black;
+    color: white;
+}
+
+#date{
+    font-size: 1.3em;
+    width: 580px;
+    height: 47px; 
+    background-color: rgba(0, 0, 0, 0.484);
+    color: white;
+}
+
+
+#Consultas{
+    width: 590px;
+    background-color: black;
+    color: white;
+    font-size: 1.1em;
+}
+
+
+#detalleCon{
+    width: 590px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    font-size: 1.1em;
+}
+
+
+
+
+
+.brutalist-card {
+    width: 320px;
+    border: 4px solid #000;
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 10px 10px 0 #000;
+    font-family: "Arial", sans-serif;
+}
+
+.brutalist-card__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #000;
+    padding-bottom: 1rem;
+}
+
+
+
+.brutalist-card__icon svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: #fff;
+}
+
+.brutalist-card__alert {
+    font-weight: 900;
+    color: #000;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+
+.brutalist-card__message {
+    margin-top: 1rem;
+    color: #000;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    border-bottom: 2px solid #000;
+    padding-bottom: 1rem;
+    font-weight: 600;
+}
+
+.brutalist-card__actions {
+    margin-top: 1rem;
+}
+
+.brutalist-card__button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid #000;
+    background-color: #fff;
+    color: #000;
+    position: relative;
+    transition: all 0.2s ease;
+    box-shadow: 5px 5px 0 #000;
+    overflow: hidden;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.brutalist-card__button--read {
+    background-color: #000;
+    color: #fff;
+}
+
+.brutalist-card__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: all 0.6s;
+}
+
+.brutalist-card__button:hover::before {
+    left: 100%;
+}
+
+.brutalist-card__button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 #000;
+}
+
+.brutalist-card__button--mark:hover {
+    background-color: #057a28;
+    border-color: #057a28;
+    color: #fff;
+    box-shadow: 7px 7px 0 #01300f;
+}
+.brutalist-card__button--red:hover {
+    background-color: red;
+    border-color: #2e1202;
+    color: #fff;
+    box-shadow: 7px 7px 0 #01300f;
+}
+
+
+
+
+.brutalist-card__button:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+
+
+
+
+@keyframes hero-gradient-animation {
+    0% {
+        --c-0: hsla(289, 100%, 52%, 1);
+        --s-start-0: 6.018788142925232%;
+        --s-end-0: 35%;
+        --x-0: 59%;
+        --y-0: 16%;
+        --s-start-1: 3.315649867374005%;
+        --s-end-1: 6.33664952285726%;
+        --y-1: 7%;
+        --c-1: hsla(236, 96%, 40%, 1);
+        --x-1: 92%;
+        --y-2: 75%;
+        --x-2: 78%;
+        --s-start-2: 0%;
+        --s-end-2: 7%;
+        --c-2: hsla(183, 61%, 42%, 1);
+        --s-start-3: 0%;
+        --s-end-3: 68%;
+        --y-3: 59%;
+        --x-3: 59%;
+        --c-3: hsla(243, 83%, 19%, 0.5);
+        --y-4: 86%;
+        --x-4: 7%;
+        --s-start-4: 3%;
+        --s-end-4: 36%;
+        --c-4: hsla(313, 91%, 42%, 1);
+    }
+
+    100% {
+        --c-0: hsla(287, 87%, 40%, 1);
+        --s-start-0: 0%;
+        --s-end-0: 11.238503048843667%;
+        --x-0: 63%;
+        --y-0: 23%;
+        --s-start-1: 0%;
+        --s-end-1: 36%;
+        --y-1: 14%;
+        --c-1: hsla(236, 100%, 50%, 1);
+        --x-1: 89%;
+        --y-2: 90%;
+        --x-2: 92%;
+        --s-start-2: 1%;
+        --s-end-2: 28%;
+        --c-2: hsla(181, 96%, 60%, 1);
+        --s-start-3: 0%;
+        --s-end-3: 36.852784336403765%;
+        --y-3: 9%;
+        --x-3: 2%;
+        --c-3: hsla(246, 83%, 28%, 0.5);
+        --y-4: 19%;
+        --x-4: 13%;
+        --s-start-4: 12.198718286003295%;
+        --s-end-4: 40%;
+        --c-4: hsla(311, 90%, 31%, 1);
+    }
+}
+
+@property --c-0 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(289, 100%, 52%, 1)
+}
+
+@property --s-start-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 6.018788142925232%
+}
+
+@property --s-end-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 35%
+}
+
+@property --x-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 59%
+}
+
+@property --y-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 16%
+}
+
+@property --s-start-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 3.315649867374005%
+}
+
+@property --s-end-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 6.33664952285726%
+}
+
+@property --y-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 7%
+}
+
+@property --c-1 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(236, 96%, 40%, 1)
+}
+
+@property --x-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 92%
+}
+
+@property --y-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 75%
+}
+
+@property --x-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 78%
+}
+
+@property --s-start-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 7%
+}
+
+@property --c-2 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(183, 61%, 42%, 1)
+}
+
+@property --s-start-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 68%
+}
+
+@property --y-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 59%
+}
+
+@property --x-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 59%
+}
+
+@property --c-3 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(243, 83%, 19%, 0.5)
+}
+
+@property --y-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 86%
+}
+
+@property --x-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 7%
+}
+
+@property --s-start-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 3%
+}
+
+@property --s-end-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 36%
+}
+
+@property --c-4 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(313, 91%, 42%, 1)
+}
+
+.body {
+
+    --c-0: hsla(289, 100%, 52%, 1);
+    --x-0: 59%;
+    --y-0: 16%;
+    --y-1: 7%;
+    --c-1: hsla(236, 96%, 40%, 1);
+    --x-1: 92%;
+    --y-2: 75%;
+    --x-2: 78%;
+    --c-2: hsla(183, 61%, 42%, 1);
+    --y-3: 59%;
+    --x-3: 59%;
+    --c-3: hsla(243, 83%, 19%, 0.5);
+    --y-4: 86%;
+    --x-4: 7%;
+    --c-4: hsla(313, 91%, 42%, 1);
+    ;
+    background-color: hsla(228, 71%, 4%, 1);
+    background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3)), radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4), transparent var(--s-end-4));
+    animation: hero-gradient-animation 10s linear infinite alternate;
+    background-blend-mode: normal, normal, normal, normal, normal;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+}
+
+#titulo{
+    color: aliceblue;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: 2px solid white;
+    display: grid;
+    
+}
+
+   button:hover {
+    background-color: #0071e2;
+    cursor: pointer;
+   }
+
+
+
+
+
+
+
