@@ -1,58 +1,11 @@
 {
   "user": [
     {
-      "id": "9da4",
-      "name": "fabio",
-      "email": "gg@gmail.com",
-      "password": "fabiohm"
-    },
-    {
-      "id": "be77",
-      "name": "lñijgrñwil",
-      "email": "kawaighm@gmail.com",
-      "password": "ahurlgaihpaionopq"
-    },
-    {
-      "id": "92aa",
-      "name": "fabio",
-      "email": "jherrera@fwdcostarica.com",
-      "password": "fabiomkvf"
-    },
-    {
-      "id": "a39f",
+      "id": "c1b3",
       "name": "fabio",
       "email": "fabio@gmail.com",
       "password": "fabiomkvf"
     }
   ],
-  "consultas": [
-    {
-      "id": "9085",
-      "Consultas": "lhSioqior",
-      "detalleCon": "pdfqpowfoqpngpq",
-      "select": "tipo ayuda",
-      "date": "2024-08-30"
-    },
-    {
-      "id": "1566",
-      "Consultas": "lhSioqior",
-      "detalleCon": "pdfqpowfoqpngpq",
-      "select": "tipo ayuda",
-      "date": "2024-08-30"
-    },
-    {
-      "id": "0ace",
-      "Consultas": "lhSioqior",
-      "detalleCon": "pdfqpowfoqpngpq",
-      "select": "tipo ayuda",
-      "date": "2024-08-30"
-    },
-    {
-      "id": "e34c",
-      "Consultas": "fabiio rico",
-      "detalleCon": "ricoooooooooooooo",
-      "select": "aclaracion de datos",
-      "date": "2024-08-30"
-    }
-  ]
+  "consultas": []
 }

@@ -1,6 +1,7 @@
-async function postConsultas (Consultas,detalleCon,select,date ) {
+async function postConsultas (Consultas,detalleCon,select,date,name ) {
     try {
         const usersDato = {
+            name,
             Consultas,
             detalleCon,
             select,
